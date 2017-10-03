@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Blog</title>
+</head>
+<body>
+<h1>Mijn Blog</h1>
+<div th:each="entry : ${entries}">
+    <h2><span th:text="${entry.getSubject()}"></span></h2>
+    <p><span th:text="${entry.getMessage()}"></span></p>
+    <p><span th:text="${entry.getTijdVanToevoeging()}"></span></p>
+</div>
+
+<form action="blog" method="POST">
+    <label>Onderwerp</label><input type="text" name="subject"/><br/>
+    <label>Bericht</label><input type="text" name="message"/><br/>
+    <input type="submit" value="Verstuur"/>
+</form>
+</body>
+</html>
