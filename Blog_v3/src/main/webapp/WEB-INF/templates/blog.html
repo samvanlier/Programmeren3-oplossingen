@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{title.blog}"></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1 th:text="#{title.blog}"></h1>
+<div th:each="entry : ${entries}">
+    <h2><span th:text="${entry.getSubject()}"></span></h2>
+    <h3>geschreven door <span th:text="${entry.getUserName()}"></span></h3>
+    <p><span th:text="${entry.getMessage()}"></span></p>
+    <p><span th:text="${entry.getTijdVanToevoeging()}"></span></p>
+
+</div>
+
+<form th:action="@{/blog}" th:object="${blogFormDto}" method="post" class="form">
+    <label>Onderwerp</label><input type="text" th:field="*{subject}"/>
+    <span th:if="${#fields.hasErrors('subject')}" th:errors="*{subject}">Subject Error</span>
+    <br/>
+    <label>Bericht</label><input type="text" th:field="*{message}"/>
+    <span th:if="${#fields.hasErrors('message')}" th:errors="*{message}">Message Error</span>
+    <br/>
+    <label>Gebruikersnaam</label><input type="text" th:field="*{userName}"/>
+    <input type="submit" value="Verstuur"/>
+</form>
+</body>
+</html>
