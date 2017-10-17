@@ -28,51 +28,9 @@ public class BlogService {
         this.entryRepo = entryRepo;
         this.userRepo = userRepo;
 
-        vulBlog(); //vergelijkbaar met Seed() in .net
     }
 
-    /**
-     * vult de DB op met test-data
-     */
-    private void vulBlog() {
-        User user = new User("Sam Van Lier");
-
-        userRepo.save(user);
-
-        Entry e1 = new Entry(
-                1,
-                "Naar de bakker geweest",
-                "Was wel leuk...",
-                Timestamp.valueOf(
-                        LocalDateTime.of(LocalDate.of(2012, 1, 12), LocalTime.now())
-                ),
-                user
-
-        );
-
-        Entry e2 = new Entry(
-                2,
-                "Netflix gekeken",
-                "Moet je ook eens doen!",
-                Timestamp.valueOf(
-                        LocalDateTime.of(LocalDate.of(2010, 1, 12), LocalTime.now())
-                ),
-                user
-        );
-
-        Entry e3 = new Entry(
-                3, "Oefeningetjes Prog 3 gemaakt",
-                "Ging vlotjes",
-                Timestamp.valueOf(
-                        LocalDateTime.of(LocalDate.of(2030, 8, 24), LocalTime.now())
-                ),
-                user
-        );
-
-        entryRepo.save(Arrays.asList(e1, e2, e3));
-    }
-
-    public boolean userExist(String userName) {
+   public boolean userExist(String userName) {
         User userToCheck = userRepo.findByName(userName);
 
         if (userToCheck == null) {

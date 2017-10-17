@@ -21,11 +21,18 @@ import java.util.ArrayList;
 public class BlogController {
 
     private final BlogService blogService;
-    private final ModelMapper modelMapper = new ModelMapper();
+    private final ModelMapper modelMapper;
 
-    @Autowired
+    //versie voor gebruik te maken van een bean voor modelmapper
+    /*@Autowired
     public BlogController(BlogService blogService) {
         this.blogService = blogService;
+    }*/
+
+    @Autowired
+    public BlogController(BlogService blogService, ModelMapper modelMapper) {
+        this.blogService = blogService;
+        this.modelMapper = modelMapper;
     }
 
     @GetMapping("/blog")

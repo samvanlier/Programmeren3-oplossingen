@@ -72,21 +72,15 @@ public class TestBlogService {
 
     @Test
     public void testIfUserIsNotCreatedIfUserAlreadyExist() {
-        User user = new User("newUser");
-        Entry entry = new Entry("hello", "world");
+        User user = new User("sam");
 
-        given(this.userRepo.findByName(user.getName())).willReturn(user);
+        this.service.addEntry(new Entry("hello", "world"), user.getName());
 
-        this.service.addEntry(entry, "newUser");
+        ArgumentCaptor<User> captor = ArgumentCaptor.forClass(User.class);
+        verify(this.userRepo, times(1)).save(captor.capture());
+        User addedUser = captor.getValue();
 
-        ArgumentCaptor<Entry> captor = ArgumentCaptor.forClass(Entry.class);
-        verify(this.entryRepo, times(1)).save(captor.capture());
-
-        Entry addedEntry = captor.getValue();
-        assertThat(addedEntry.getSubject(), is(entry.getSubject()));
-        assertThat(addedEntry.getMessage(), is(entry.getMessage()));
-        assertThat(addedEntry.getUser(), is(entry.getUser()));
-        assertThat(addedEntry.getTijdVanToevoeging(), is(entry.getTijdVanToevoeging()));
+        assertThat(addedUser.getName(), is(user.getName()));
     }
 
     @Test
