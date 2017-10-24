@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 @Entity //persistencie (week 4)
 public class Entry implements Comparable {
@@ -49,6 +50,13 @@ public class Entry implements Comparable {
     public Entry(String subject, String message) {
         this.subject = subject;
         this.message = message;
+    }
+
+    public Entry(int id, String subject, String message, Timestamp tijdVanToevoeging) {
+        this.id = id;
+        this.subject = subject;
+        this.message = message;
+        this.tijdVanToevoeging = tijdVanToevoeging;
     }
 
     public int getId() {

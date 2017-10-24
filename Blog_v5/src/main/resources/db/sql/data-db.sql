@@ -1,6 +1,6 @@
 --insert data
 insert into user (name, password)
-VALUES ('sam', 'sam');
+VALUES ('sam', '$2a$04$Y4diLImk98yiIUNI438OFezmlRvbqn97Fth4qnh8TDwV.Pi/pXr1S');
 
 insert into entry (subject, message, tijd_van_toevoeging, user_id)
   VALUES ('Naar de bakker geweest', 'Was wel leuk...', '2016-08-30 14:47:00',
