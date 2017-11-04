@@ -18,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 
+//DEEL 2
 @WebServlet("/api/blog/posts/*")
 public class BlogApiServlet extends HttpServlet {
 
@@ -36,6 +37,9 @@ public class BlogApiServlet extends HttpServlet {
         resp.getWriter().write(res);
     }
 
+    /*
+    get methode: stuurt data terug in JSON
+     */
     // GET/api/blog/posts/id
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -46,8 +50,6 @@ public class BlogApiServlet extends HttpServlet {
 
         if (pathInfo == null || pathInfo.equals("/")) {
             //send all entries and end
-
-
             sendAsJson(resp, blog);
             return;
         }
@@ -67,7 +69,6 @@ public class BlogApiServlet extends HttpServlet {
         }
 
         //stuur entry
-
         sendAsJson(resp, blog.getEntry(id));
     }
 
@@ -96,7 +97,7 @@ public class BlogApiServlet extends HttpServlet {
             sendAsJson(resp, entry);
         } else {
             resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
-            return;
+            //return;
         }
     }
 }
