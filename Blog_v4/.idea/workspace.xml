@@ -55,8 +55,8 @@
       <file leaf-file-name="BlogController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/controller/BlogController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-47">
-              <caret line="31" column="113" lean-forward="false" selection-start-line="31" selection-start-column="113" selection-end-line="31" selection-end-column="113" />
+            <state relative-caret-position="4">
+              <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
               <folding>
                 <element signature="method#getEntries#0;class#BlogController#0" expanded="false" />
               </folding>
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlogService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BlogService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/service/BlogService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="21" column="75" lean-forward="false" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+            <state relative-caret-position="187">
+              <caret line="24" column="113" lean-forward="false" selection-start-line="24" selection-start-column="113" selection-end-line="24" selection-end-column="113" />
               <folding>
                 <element signature="method#BlogService#0;class#BlogService#0" expanded="false" />
                 <element signature="method#userExist#0;class#BlogService#0" expanded="false" />
@@ -78,7 +78,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestBlogService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestBlogService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/TestBlogService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
@@ -420,8 +420,8 @@
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/controller/BlogController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/service/BlogService.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/TestBlogService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/service/BlogService.java" />
       </list>
     </option>
   </component>
@@ -901,7 +901,7 @@
       <workItem from="1508431562224" duration="1281000" />
       <workItem from="1508844354403" duration="47000" />
       <workItem from="1508849456863" duration="32000" />
-      <workItem from="1509803223395" duration="2364000" />
+      <workItem from="1509803223395" duration="2620000" />
     </task>
     <servers />
   </component>
@@ -938,7 +938,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24713000" />
+    <option name="totallyTimeSpent" value="24969000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -1296,33 +1296,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/controller/BlogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-47">
-          <caret line="31" column="113" lean-forward="false" selection-start-line="31" selection-start-column="113" selection-end-line="31" selection-end-column="113" />
-          <folding>
-            <element signature="method#getEntries#0;class#BlogController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="52" lean-forward="false" selection-start-line="5" selection-start-column="52" selection-end-line="5" selection-end-column="52" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/service/BlogService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="21" column="75" lean-forward="false" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
-          <folding>
-            <element signature="method#BlogService#0;class#BlogService#0" expanded="false" />
-            <element signature="method#userExist#0;class#BlogService#0" expanded="false" />
-            <element signature="method#addEntry#1;class#BlogService#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1335,6 +1313,28 @@
             <element signature="method#testAddNewUserIfUserDoesNotExist#0;class#TestBlogService#0" expanded="false" />
             <element signature="e#2962#2998#0" expanded="false" />
             <element signature="e#3922#3958#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/controller/BlogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="34" column="27" lean-forward="true" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
+          <folding>
+            <element signature="method#getEntries#0;class#BlogController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/service/BlogService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="24" column="113" lean-forward="false" selection-start-line="24" selection-start-column="113" selection-end-line="24" selection-end-column="113" />
+          <folding>
+            <element signature="method#BlogService#0;class#BlogService#0" expanded="false" />
+            <element signature="method#userExist#0;class#BlogService#0" expanded="false" />
+            <element signature="method#addEntry#1;class#BlogService#0" expanded="false" />
           </folding>
         </state>
       </provider>

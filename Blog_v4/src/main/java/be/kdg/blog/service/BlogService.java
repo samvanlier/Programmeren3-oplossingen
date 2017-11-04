@@ -22,7 +22,8 @@ import java.util.Collection;
 - deze laag spreekt de repo's/DAL aan zodat de contoller dit niet moet doen
  */
 @Service
-@Transactional
+//gaat er voorzorgen dat code behandelt wordt zoals transacties in sql (doet rollback bij runtimeExceptions,....)
+@Transactional //doc: https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/transaction/annotation/Transactional.html
 public class BlogService {
 
     private final EntryRepository entryRepo;
