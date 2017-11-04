@@ -14,7 +14,7 @@ public class Entry implements Comparable {
     @NotNull
     @Size(min = 3)
     private String message;
-    private LocalDateTime tijdVanToevoeging;
+    private LocalDateTime tijdVanToevoeging; //deel 3
 
     public Entry() {
     }
@@ -72,7 +72,6 @@ public class Entry implements Comparable {
     @Override
     public int compareTo(Object o) {
         int compareDate = this.getTijdVanToevoeging().compareTo(((Entry) o).getTijdVanToevoeging());
-
 
         return compareDate;
     }

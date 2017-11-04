@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+//DEEL 3;
 @Component
 public class Blog {
     private ArrayList<Entry> entries; //sort of db

@@ -50,6 +50,10 @@ public class BlogControllerTest {
         this.mvc = MockMvcBuilders.webAppContextSetup(wac).build();
     }
 
+    /*
+    Een GET op /blog​ moet HTTP status code 200​ teruggeven en de naam van de gebruikte view moet gelijk zijn aan de naam
+    van jouw view
+     */
     @Test
     public void testGetBlogName() throws Exception {
         this.mvc.perform(get("/blog").accept(MediaType.TEXT_HTML))
@@ -57,6 +61,10 @@ public class BlogControllerTest {
                 .andExpect(view().name("blog"));
     }
 
+    /*
+    Een POST op /blog​ (met dummy parameters subject en message) moet HTTP status code 200​ teruggeven en de naam van de
+    gebruikte view moet gelijk zijn aan de naam van jouw view
+     */
     @Test
     public void testPostBlog() throws Exception {
         String subject = "hello";
@@ -71,7 +79,10 @@ public class BlogControllerTest {
                 .andExpect(view().name("blog"));
     }
 
-
+    /*
+    Een GET op /blog​ moet een pagina teruggeven die de subjects en de message bodies bevat die teruggegeven worden door
+    je “gemockt” Blog​ object
+     */
     @Test
     public void testGetBlogEntries() throws Exception {
         final LocalDateTime time1 = LocalDateTime.now();
@@ -91,10 +102,10 @@ public class BlogControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString(e1.getSubject())))
                 .andExpect(content().string(containsString(e1.getMessage())))
-                .andExpect(content().string(containsString(e1.getTijdVanToevoeging().toString())))
+                .andExpect(content().string(containsString(e1.getTijdVanToevoeging().toString()))) //DEEL 3
                 .andExpect(content().string(containsString(e2.getSubject())))
                 .andExpect(content().string(containsString(e2.getMessage())))
-                .andExpect(content().string(containsString(e2.getTijdVanToevoeging().toString())))
+                .andExpect(content().string(containsString(e2.getTijdVanToevoeging().toString()))) //DEEL 3
         ;
     }
 
