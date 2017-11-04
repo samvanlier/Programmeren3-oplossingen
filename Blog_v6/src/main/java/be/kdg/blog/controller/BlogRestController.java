@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
+//DEEL 1
 @RestController
 public class BlogRestController {
     private final BlogService blogService;
@@ -26,6 +26,10 @@ public class BlogRestController {
         this.modelMapper = modelMapper;
     }
 
+    /*
+    Een GET op /users/{userId}/entries
+    moet een JSON-resultaat teruggeven met een lijst van blog entries van de gebruiker in kwestie.
+     */
     @GetMapping("/users/{userId}/entries")
     public Collection<BlogEntryDto> getEntriesByUserId(@PathVariable int userId, @AuthenticationPrincipal UserDetails userDetails) {
         Collection<BlogEntryDto> dtos = new ArrayList<>();
@@ -37,13 +41,22 @@ public class BlogRestController {
 
                 dtos.add(dto);
             }
-
         } catch (NotFoundException e) {
             e.printStackTrace();
         }
+
         return dtos;
     }
 
+    /*
+    Een POST op /entries
+    met volgende request body
+    {
+        "subject": "Dingen gedaan",
+        "message": "Vandaag veel gedaan"
+    }
+    moet een blog entry aan hetsysteem toevoegen voor de ingelogde gebruiker
+     */
     @PostMapping("/entries")
     public void postNewEntry(@AuthenticationPrincipal UserDetails userDetails, @RequestBody BlogFormDto entryDto) {
         if (entryDto != null) {

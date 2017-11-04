@@ -3,7 +3,6 @@ package test;
 import be.kdg.blog.Application;
 import be.kdg.blog.controller.BlogRestController;
 import be.kdg.blog.dto.BlogEntryDto;
-import be.kdg.blog.dto.BlogFormDto;
 import be.kdg.blog.model.Entry;
 import be.kdg.blog.security.CustomUserDetails;
 import be.kdg.blog.service.BlogService;
@@ -26,7 +25,6 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 
 import static org.hamcrest.CoreMatchers.is;
@@ -67,6 +65,10 @@ public class TestBlogRestController {
                 .build();
     }
 
+    /*
+    given : Indien je gemockte service voor een bepaalde gebruiker een tweetal blog entries zou afleveren,
+    moet je nagaan ( expect ) of alle velden van de afgeleverde JSON wel een juiste inhoud bevatten.
+     */
     @Test
     @WithUserDetails("sam")
     public void testMVCGetEntriesByUserId() throws Exception {
@@ -92,6 +94,12 @@ public class TestBlogRestController {
         .andExpect(jsonPath("$[0].subject", is(dto.getSubject())));
     }
 
+    /*
+    Je roept de REST controller methode aan die instaat voor het toevoegen van een blog entry.
+    Je verifieert dat er een methode van je service klasse opgeroepen is geweest die instaat voor het toevoegen
+    van een blog entry. Je kijkt ook na of de parameter die deze laatste methode binnen gekregen heeft gelijk is aan de
+    parameter die je zelf aan de controller methode doorgaf.
+     */
     @Test
     public void testGetEntriesByUserId() throws NotFoundException {
         int id = 1;
