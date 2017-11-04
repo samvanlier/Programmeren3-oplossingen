@@ -52,51 +52,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestBlogControllerMetAuthenticatie.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/TestBlogControllerMetAuthenticatie.java">
+      <file leaf-file-name="ApplicationSecurityConfig.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/config/ApplicationSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="61" column="96" lean-forward="false" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestSecurity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/TestSecurity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="70" column="69" lean-forward="false" selection-start-line="70" selection-start-column="69" selection-end-line="70" selection-end-column="69" />
+            <state relative-caret-position="374">
+              <caret line="49" column="82" lean-forward="false" selection-start-line="49" selection-start-column="82" selection-end-line="49" selection-end-column="82" />
               <folding>
-                <element signature="method#setup#0;class#TestSecurity#0" expanded="false" />
-                <element signature="method#testLogin#0;class#TestSecurity#0" expanded="false" />
-                <element signature="method#testLoginFails#0;class#TestSecurity#0" expanded="false" />
+                <element signature="docComment;class#ApplicationSecurityConfig#0" expanded="false" />
+                <element signature="e#2363#2364#0" expanded="true" />
+                <element signature="e#2418#2419#0" expanded="true" />
+                <element signature="method#configure#1;class#ApplicationSecurityConfig#0" expanded="false" />
+                <element signature="method#authProvider#0;class#ApplicationSecurityConfig#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestBlogService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/TestBlogService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
-              <folding>
-                <element signature="method#testFindAllEntries#0;class#TestBlogService#0" expanded="false" />
-                <element signature="method#testAddNewUserIfUserDoesNotExist#0;class#TestBlogService#0" expanded="false" />
-                <element signature="method#testIfUserIsNotCreatedIfUserAlreadyExist#0;class#TestBlogService#0" expanded="false" />
-                <element signature="method#testAddNewEntry#0;class#TestBlogService#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpringSecurityWebTestConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/test/SpringSecurityWebTestConfig.java">
+      <file leaf-file-name="LoginSuccessHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/security/LoginSuccessHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="18" column="115" lean-forward="false" selection-start-line="18" selection-start-column="115" selection-end-line="18" selection-end-column="115" />
-              <folding />
+              <caret line="13" column="102" lean-forward="false" selection-start-line="13" selection-start-column="102" selection-end-line="13" selection-end-column="102" />
+              <folding>
+                <element signature="e#718#719#0" expanded="true" />
+                <element signature="e#758#759#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -415,11 +395,12 @@
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/repository/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/security/CustomUserDetails.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/service/UserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/config/ApplicationSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/TestBlogService.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/TestSecurity.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/SpringSecurityWebTestConfig.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/TestBlogControllerMetAuthenticatie.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/security/LoginSuccessHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/config/ApplicationSecurityConfig.java" />
       </list>
     </option>
   </component>
@@ -430,10 +411,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="9" />
-    <option name="y" value="218" />
-    <option name="width" value="683" />
-    <option name="height" value="768" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="784" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -534,6 +515,23 @@
               <item name="Blog_v5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_v5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Blog_v5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Blog_v5" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -591,6 +589,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="be.kdg.blog.security" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="test" />
       <recent name="be.kdg.blog.config" />
@@ -615,7 +616,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestBlogControllerMetAuthenticatie">
+  <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="be.kdg.blog.Application" />
@@ -861,7 +862,7 @@
       <workItem from="1508837015088" duration="11269000" />
       <workItem from="1508960920320" duration="52000" />
       <workItem from="1508961127510" duration="626000" />
-      <workItem from="1509807607042" duration="1529000" />
+      <workItem from="1509807607042" duration="2737000" />
     </task>
     <servers />
   </component>
@@ -898,7 +899,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25580000" />
+    <option name="totallyTimeSpent" value="26788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -913,7 +914,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.72307694" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -949,13 +950,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/security/CustomUserDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -969,7 +963,8 @@
           <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
           <folding>
             <element signature="docComment;class#ApplicationSecurityConfig#0" expanded="false" />
-            <element signature="method#configure#0;class#ApplicationSecurityConfig#0" expanded="false" />
+            <element signature="e#2363#2364#0" expanded="true" />
+            <element signature="e#2418#2419#0" expanded="true" />
             <element signature="method#configure#1;class#ApplicationSecurityConfig#0" expanded="false" />
             <element signature="method#authProvider#0;class#ApplicationSecurityConfig#0" expanded="false" />
           </folding>
@@ -1121,7 +1116,8 @@
           <caret line="59" column="19" lean-forward="false" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="19" />
           <folding>
             <element signature="docComment;class#ApplicationSecurityConfig#0" expanded="false" />
-            <element signature="method#configure#0;class#ApplicationSecurityConfig#0" expanded="false" />
+            <element signature="e#2363#2364#0" expanded="true" />
+            <element signature="e#2418#2419#0" expanded="true" />
             <element signature="method#configure#1;class#ApplicationSecurityConfig#0" expanded="false" />
             <element signature="method#authProvider#0;class#ApplicationSecurityConfig#0" expanded="false" />
           </folding>
@@ -1266,19 +1262,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/config/ApplicationSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-          <folding>
-            <element signature="docComment;class#ApplicationSecurityConfig#0" expanded="false" />
-            <element signature="method#configure#0;class#ApplicationSecurityConfig#0" expanded="false" />
-            <element signature="method#configure#1;class#ApplicationSecurityConfig#0" expanded="false" />
-            <element signature="method#authProvider#0;class#ApplicationSecurityConfig#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/service/BlogService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
@@ -1324,9 +1307,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/TestBlogControllerMetAuthenticatie.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="61" column="96" lean-forward="false" selection-start-line="61" selection-start-column="96" selection-end-line="61" selection-end-column="96" />
+        <state relative-caret-position="595">
+          <caret line="65" column="41" lean-forward="false" selection-start-line="65" selection-start-column="41" selection-end-line="65" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/security/LoginSuccessHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="13" column="102" lean-forward="false" selection-start-line="13" selection-start-column="102" selection-end-line="13" selection-end-column="102" />
+          <folding>
+            <element signature="e#718#719#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/config/ApplicationSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="49" column="82" lean-forward="false" selection-start-line="49" selection-start-column="82" selection-end-line="49" selection-end-column="82" />
+          <folding>
+            <element signature="docComment;class#ApplicationSecurityConfig#0" expanded="false" />
+            <element signature="e#2363#2364#0" expanded="true" />
+            <element signature="e#2418#2419#0" expanded="true" />
+            <element signature="method#configure#1;class#ApplicationSecurityConfig#0" expanded="false" />
+            <element signature="method#authProvider#0;class#ApplicationSecurityConfig#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
