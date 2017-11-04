@@ -36,7 +36,7 @@ public class TestBlogService {
     @MockBean
     private UserRepository userRepo;
 
-    BlogService service;
+    private BlogService service;
 
     @Before
     public void setup() {

@@ -13,9 +13,9 @@ public class User {
     @Column (length = 50, nullable = false) //persistencie (week 4)
     private String name;
 
-    @Column(nullable = false)
-    @Size(min = 3)
-    private String password;
+    @Column(nullable = false) //is voor persisitencie
+    @Size(min = 3) //is voor persisitencie
+    private String password; //ook SQL aanpassen dat de users die je inserteerd ook een password hebben
 
     public User() {
     }

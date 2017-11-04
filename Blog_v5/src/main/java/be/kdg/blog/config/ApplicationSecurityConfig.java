@@ -32,32 +32,36 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/", "/blog").authenticated()
+                .antMatchers("/", "/blog").authenticated() //welke urls moeten geauthenticeerd worden (voor welke urls moeten men ingelogt zijn)
                 .anyRequest().permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/login").permitAll()
+                .loginPage("/login").permitAll() //deze url is toeganklijk voor iedereen & is ook de auto-redirect als men naar vb. "/blog" gaat en niet ingelogt is
                 .and()
                 .logout()
                 .permitAll();
     }
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
+    //DEEL 3
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        //deze config methode wordt gebruikt om eventuele password encoders in te stellen
+        auth.authenticationProvider(this.authProvider());
     }
 
+    //DEEL 3
     @Bean
     public DaoAuthenticationProvider authProvider() {
         DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
         authProvider.setUserDetailsService(this.userService);
-        authProvider.setPasswordEncoder(passwordEncoder());
+        authProvider.setPasswordEncoder(this.passwordEncoder());
         return authProvider;
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authProvider());
+    //DEEL 3
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
     }
 
 }

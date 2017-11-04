@@ -15,8 +15,12 @@ import java.util.List;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+/*
+Deze klasse doet configuratie voor het mocke van UserDetailsService (zodat er getest kan worden met gemockte users)
+ */
 @TestConfiguration
 public class SpringSecurityWebTestConfig {
+
     @Bean
     @Primary
     public UserDetailsService userDetailsService() {
@@ -29,5 +33,7 @@ public class SpringSecurityWebTestConfig {
 
         return mockedUserDetailsService;
     }
+
+
 }
 

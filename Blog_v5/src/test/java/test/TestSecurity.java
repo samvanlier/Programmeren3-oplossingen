@@ -50,7 +50,9 @@ public class TestSecurity {
                 .build();
     }
 
-
+    /*
+    Inloggen met een correcte gebruikersnaam/wachtwoord moet lukken.
+     */
     @Test
     public void testLogin() throws Exception {
         List<GrantedAuthority> authorities = new ArrayList<>();
@@ -65,6 +67,9 @@ public class TestSecurity {
                 .andExpect(redirectedUrl("/"));
     }
 
+    /*
+    Inloggen met een foute gebruikersnaam/wachtwoord mag niet lukken.
+     */
     @Test
     public void testLoginFails() throws Exception {
         List<GrantedAuthority> authorities = new ArrayList<>();
@@ -78,6 +83,5 @@ public class TestSecurity {
                 .andExpect(status().is3xxRedirection())
                 .andExpect(redirectedUrl("/login?error"));
     }
-
 
 }

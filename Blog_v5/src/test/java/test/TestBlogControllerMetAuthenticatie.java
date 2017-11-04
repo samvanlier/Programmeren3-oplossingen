@@ -33,13 +33,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = { Application.class, SpringSecurityWebTestConfig.class })
+@SpringBootTest(classes = { Application.class, SpringSecurityWebTestConfig.class }) //toevoegen van een test-config klasse
 @WebAppConfiguration
 @EnableWebSecurity
 public class TestBlogControllerMetAuthenticatie {
 
     @MockBean
-    private BlogService blogService;
+    private BlogService blogService; //wordt wel gebruikt dus niet verwijderen!
 
     @Autowired
     private WebApplicationContext wac;
@@ -55,8 +55,11 @@ public class TestBlogControllerMetAuthenticatie {
                 .build();
     }
 
+    /*
+    Een blog item toevoegen is een actie die succesvol afgerond moet kunnen worden indien je ingelogd bent.
+     */
     @Test
-    @WithUserDetails("sam")
+    @WithUserDetails("sam") //zorgt er voor dat er een gemockte user is (die geauthenticeerd is)
     public void testPostEntry() throws Exception {
         this.mvc.perform(post("/blog")
             .with(csrf())
@@ -66,6 +69,9 @@ public class TestBlogControllerMetAuthenticatie {
                 .andExpect(status().isOk());
     }
 
+    /*
+    Een blog item toevoegen is een actie die niet succesvol afgerond mag kunnen worden indien je niet ingelogd bent.
+     */
     @Test
     public void testPostEntryNotLoggedIn() throws Exception {
         this.mvc.perform(post("/blog")

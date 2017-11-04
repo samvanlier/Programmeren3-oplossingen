@@ -14,8 +14,11 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
+//lever de UserDetails (voor ons is dat de klasse CustomUserDatails)
 @Service
 public class UserService implements UserDetailsService {
+
+    //gebruik repo om users op te halen van de db
     private final UserRepository userRepo;
 
     @Autowired
@@ -28,11 +31,18 @@ public class UserService implements UserDetailsService {
         final User user = userRepo.findByName(username);
 
         if (user != null) {
-            final List<GrantedAuthority> authorities = new ArrayList<>();
-            authorities.add(new SimpleGrantedAuthority("ROLE_USER"));
-            return new CustomUserDetails(user.getName(), user.getPassword(), user.getId(), authorities);
+            return this.makeUserDetails(user);
         } else {
             throw new UsernameNotFoundException("User '" + username + "' not found.");
         }
+    }
+
+    /*
+    deze methode gaat de userdetails maken
+     */
+    private CustomUserDetails makeUserDetails(User user) {
+        final List<GrantedAuthority> authorities = new ArrayList<>();
+        authorities.add(new SimpleGrantedAuthority("ROLE_USER")); //autoriteit geven aan users -> dit gaat er voorzorgen dat ze bepaalde html pagina's kunnen zien als ze ingelogt zijn
+        return new CustomUserDetails(user.getName(), user.getPassword(), user.getId(), authorities); //maak een nieuw CustomUserDetails op basis van de username, password en autoriteit (in dit geval is er maar 1 rol)
     }
 }
