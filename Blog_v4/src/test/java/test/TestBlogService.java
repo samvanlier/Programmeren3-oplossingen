@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -39,13 +40,16 @@ public class TestBlogService {
     @MockBean
     private UserRepository userRepo;
 
+    @Autowired
     private BlogService service;
 
+/*
+    //before niet nodige als je autowired gebruikt
     @Before
     public void setup() {
         this.service = new BlogService(entryRepo, userRepo);
     }
-
+*/
     /*
     Kijk na of de findAll methode van je BlogEntry-service wel alle objecten teruggeeft
     die in je (gemockte) repository zitten
