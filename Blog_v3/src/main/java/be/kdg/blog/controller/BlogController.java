@@ -20,7 +20,8 @@ import java.util.ArrayList;
 public class BlogController {
 
     private final Blog blog;
-    private final ModelMapper modelMapper = new ModelMapper();
+    private final ModelMapper modelMapper = new ModelMapper(); //gebruiken om objecten te mappen op DTO's (geimporteerd via gradle)
+
     @Autowired
     public BlogController(Blog blog) {
         this.blog = blog;
@@ -31,10 +32,18 @@ public class BlogController {
     public ModelAndView getEntries() {
         ModelAndView  modelAndView = getBlogModelAndView();
         //modelAndView.getModel().put("entry", new Entry()); //zorgt voor een nieuwe entry voor de form
-        modelAndView.getModel().put("blogFormDto", new BlogFormDto()); //deel 3
+        modelAndView.getModel().put("blogFormDto", new BlogFormDto()); //deel 3 -> zorgt er voor dat er een leeg dto object is zodat deze in de form kan worden gevult en verstuurd kan worden naar de post
         return modelAndView;
     }
 
+    /*
+    DEEL 1:
+        - entry komt binnen
+        - eerst valideren
+    DEEL 3:
+        - bij een post komt er nu een DTO binne (deze bevat een subject en message)
+        - valideer deze dto eerst!
+     */
     @PostMapping("/blog")
     public ModelAndView postEntry(@Valid @ModelAttribute BlogFormDto formDto, BindingResult bindingResult) {
        ModelAndView modelAndView = getBlogModelAndView();
@@ -48,8 +57,9 @@ public class BlogController {
         return modelAndView;
     }
 
-
-
+    /*
+    extra hulp methode voor het maken van een ModelAndView
+     */
     private ModelAndView getBlogModelAndView() {
         final ModelAndView modelAndView;
         modelAndView = new ModelAndView();
@@ -69,6 +79,4 @@ public class BlogController {
 
         return modelAndView;
     }
-
-
 }

@@ -2,6 +2,7 @@ package be.kdg.blog.dto;
 
 import java.time.LocalDateTime;
 
+//DEEL 3
 public class BlogEntryDto {
     private String subject;
     private String message;

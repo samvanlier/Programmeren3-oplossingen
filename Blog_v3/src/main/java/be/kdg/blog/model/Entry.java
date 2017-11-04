@@ -6,12 +6,12 @@ import java.time.LocalDateTime;
 
 public class Entry implements Comparable {
     private int id;
-    @NotNull(message = "{form.invalid.empty}")
-    @Size(min = 3, message = "{form.invalid.size}")
+    @NotNull(message = "{form.invalid.empty}") //message = deel 2
+    @Size(min = 3, message = "{form.invalid.size}") //message = deel 2
     private String subject;
 
-    @NotNull(message = "{form.invalid.empty}")
-    @Size(min = 3, message = "{form.invalid.size}")
+    @NotNull(message = "{form.invalid.empty}") //message = deel 2
+    @Size(min = 3, message = "{form.invalid.size}") //message = deel 2
     private String message;
     private LocalDateTime tijdVanToevoeging;
 

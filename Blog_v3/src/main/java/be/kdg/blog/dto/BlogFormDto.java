@@ -1,5 +1,6 @@
 package be.kdg.blog.dto;
 
+//DEEL 3
 public class BlogFormDto {
     private String subject;
     private String message;
