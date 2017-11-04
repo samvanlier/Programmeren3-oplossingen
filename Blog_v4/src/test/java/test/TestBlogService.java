@@ -99,6 +99,9 @@ public class TestBlogService {
         assertThat(addedUser.getName(), is(user.getName()));
     }
 
+    /*
+    Kijk na of de save methode van je BlogEntry-service de nieuwe BlogEntry correct opslaat in de BlogEntry -repository
+     */
     @Test
     public void testAddNewEntry() {
         Entry entry = new Entry("hello", "world");

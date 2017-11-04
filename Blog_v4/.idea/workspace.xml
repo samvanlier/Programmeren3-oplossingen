@@ -81,13 +81,13 @@
       <file leaf-file-name="TestBlogService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/TestBlogService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="111" column="149" lean-forward="false" selection-start-line="111" selection-start-column="149" selection-end-line="111" selection-end-column="149" />
+            <state relative-caret-position="250">
+              <caret line="102" column="47" lean-forward="true" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
               <folding>
                 <element signature="method#testFindAllEntries#0;class#TestBlogService#0" expanded="false" />
                 <element signature="method#testAddNewUserIfUserDoesNotExist#0;class#TestBlogService#0" expanded="false" />
                 <element signature="e#2962#2998#0" expanded="false" />
-                <element signature="e#3787#3823#0" expanded="false" />
+                <element signature="e#3922#3958#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -431,7 +431,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="683" />
     <option name="width" value="683" />
     <option name="height" value="768" />
@@ -901,7 +901,7 @@
       <workItem from="1508431562224" duration="1281000" />
       <workItem from="1508844354403" duration="47000" />
       <workItem from="1508849456863" duration="32000" />
-      <workItem from="1509803223395" duration="2298000" />
+      <workItem from="1509803223395" duration="2364000" />
     </task>
     <servers />
   </component>
@@ -938,10 +938,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24647000" />
+    <option name="totallyTimeSpent" value="24713000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -998,7 +998,7 @@
             <element signature="method#testFindAllEntries#0;class#TestBlogService#0" expanded="false" />
             <element signature="method#testAddNewUserIfUserDoesNotExist#0;class#TestBlogService#0" expanded="false" />
             <element signature="e#2962#2998#0" expanded="false" />
-            <element signature="e#3787#3823#0" expanded="false" />
+            <element signature="e#3922#3958#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1328,13 +1328,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/test/TestBlogService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="111" column="149" lean-forward="false" selection-start-line="111" selection-start-column="149" selection-end-line="111" selection-end-column="149" />
+        <state relative-caret-position="250">
+          <caret line="102" column="47" lean-forward="true" selection-start-line="102" selection-start-column="47" selection-end-line="102" selection-end-column="47" />
           <folding>
             <element signature="method#testFindAllEntries#0;class#TestBlogService#0" expanded="false" />
             <element signature="method#testAddNewUserIfUserDoesNotExist#0;class#TestBlogService#0" expanded="false" />
             <element signature="e#2962#2998#0" expanded="false" />
-            <element signature="e#3787#3823#0" expanded="false" />
+            <element signature="e#3922#3958#0" expanded="false" />
           </folding>
         </state>
       </provider>
