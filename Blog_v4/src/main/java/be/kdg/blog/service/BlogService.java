@@ -16,6 +16,11 @@ import java.time.LocalTime;
 import java.util.Arrays;
 import java.util.Collection;
 
+//DEEL 2: de service-laag
+/*
+- deze bevat de logica voor de controllers (Bussiness laag)
+- deze laag spreekt de repo's/DAL aan zodat de contoller dit niet moet doen
+ */
 @Service
 @Transactional
 public class BlogService {
@@ -23,26 +28,26 @@ public class BlogService {
     private final EntryRepository entryRepo;
     private final UserRepository userRepo;
 
+    //repo's worden geïnjecteerd
     @Autowired
     public BlogService(EntryRepository entryRepo, UserRepository userRepo) {
         this.entryRepo = entryRepo;
         this.userRepo = userRepo;
-
     }
 
-   public boolean userExist(String userName) {
-        User userToCheck = userRepo.findByName(userName);
+    //kijkt na of user bestaat via de userRepo
+    private boolean userExist(String userName) {
+        User userToCheck = userRepo.findByName(userName); //is geschreven in interface (een custom methode)
 
         if (userToCheck == null) {
             return false;
         } else {
             return true;
         }
-
     }
 
     public void addEntry(Entry entry) {
-       entryRepo.save(entry);
+        entryRepo.save(entry);
     }
 
     public Collection<Entry> getAllEntries() {
@@ -50,16 +55,15 @@ public class BlogService {
     }
 
     public void addEntry(Entry entry, String userName) {
-        if (userExist(userName)){
+        if (userExist(userName)) {
             entry.setUser(userRepo.findByName(userName));
             entryRepo.save(entry);
-        }
-        else {
+        } else {
             User user = new User(userName);
 
             entry.setUser(user);
 
-            userRepo.save(user);
+            userRepo.save(user); //methode moest niet schreven worden in de repo interface (overerving van JPA)
             entryRepo.save(entry);
         }
     }

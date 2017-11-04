@@ -8,5 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * moet JpaRepository extenden!
  */
 public interface UserRepository extends JpaRepository<User, Integer> {
-    public User findByName(String name); //custom zoek methode (hibernate maakt de gewenste query voor ons om te zoeken op naam)
+
+    //custom zoek methode (hibernate maakt de gewenste query voor ons om te zoeken op naam)
+    User findByName(String name);
 }

@@ -8,7 +8,7 @@ import java.sql.Timestamp;
 @Entity //persistencie (week 4)
 public class Entry implements Comparable {
     @Id //persistencie (week 4)
-    @GeneratedValue(strategy =  GenerationType.IDENTITY) //persistencie (week 4)
+    @GeneratedValue(strategy =  GenerationType.IDENTITY)//genereerd een unieke Id voor elke nieuwe entry //persistencie (week 4)
     @Column //persistencie (week 4)
     private int id;
 
@@ -22,8 +22,8 @@ public class Entry implements Comparable {
     @Size(min = 3, message = "{form.invalid.size}") //validation (week 3)
     private String message;
 
-    @Column
-    private Timestamp tijdVanToevoeging;
+    @Column //persistencie (week 4)
+    private Timestamp tijdVanToevoeging; //aanpassen naar Timestamp (LocalDate(Time) niet optimaal ondersteund in java 8)
 
     @ManyToOne
     @JoinColumn (nullable = false) //werkt enkel als Class User geen naam heeft gekregen (zie de annotatie)

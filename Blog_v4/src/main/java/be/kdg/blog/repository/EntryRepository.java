@@ -5,8 +5,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * week 4: repo-class voor het object Entry
- * moet JpaRepository extenden!
+ * moet JpaRepository extenden! (bevat super veel methodes)
  */
+
 public interface EntryRepository extends JpaRepository<Entry, Integer> {
-    //mag leeg zijn (de JpaRepo genereerd defauld CRUD operaties)
+    //mag leeg zijn (de JpaRepo genereerd default CRUD operaties & meer)
+    //zie api https://docs.spring.io/spring-data/jpa/docs/current/api/org/springframework/data/jpa/repository/JpaRepository.html
 }

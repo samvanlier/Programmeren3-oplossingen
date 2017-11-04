@@ -29,6 +29,7 @@ public class BlogController {
         this.blogService = blogService;
     }*/
 
+    //modelMapper wordt nu geïnjecteerd via DI (zie configuration klassen hoe je een bean maakt voor ModelMapper)
     @Autowired
     public BlogController(BlogService blogService, ModelMapper modelMapper) {
         this.blogService = blogService;
