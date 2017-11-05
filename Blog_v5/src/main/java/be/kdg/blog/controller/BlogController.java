@@ -78,4 +78,14 @@ public class BlogController {
 
         return modelAndView;
     }
+
+    //WARNING
+    //Deze methode heeft niks te maken met de oefeningen maar het is gemaakt om iets te testen (html late zien als je wel of niet ingelogt bent)
+    @GetMapping("/test")
+    public ModelAndView testLogin() {
+        final ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("loggedin");
+
+        return modelAndView;
+    }
 }

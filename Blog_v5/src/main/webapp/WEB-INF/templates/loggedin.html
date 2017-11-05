@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>login test</title>
+</head>
+<body>
+<div sec:authorize="isAnonymous()">
+    <p>deze tekst is niet te zien als je ingelogt bent</p>
+</div>
+<div sec:authorize="isAuthenticated()">
+    <p>deze tekst is te zien als je ingelogt bent</p>
+</div>
+</body>
+</html>
