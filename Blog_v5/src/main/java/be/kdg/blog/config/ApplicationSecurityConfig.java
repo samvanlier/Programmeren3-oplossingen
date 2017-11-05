@@ -76,6 +76,11 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    /*
+    deze bean gaat er voorzorgen dat er extra methodes zijn voor thymeleaf
+    deze methodes zijn noodzakelijk als we bv een div willen tonen aan een gebruiker die wel ingelogt is
+    en niet aan iemand die niet ingelogt is
+     */
     @Bean
     public SpringSecurityDialect springSecurityDialect(){
         return new SpringSecurityDialect();

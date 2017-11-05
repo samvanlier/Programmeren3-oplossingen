@@ -52,16 +52,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ApplicationSecurityConfig.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ApplicationSecurityConfig.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/config/ApplicationSecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="823">
-              <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+            <state relative-caret-position="449">
+              <caret line="81" column="43" lean-forward="false" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
               <folding>
                 <element signature="method#configure#1;class#ApplicationSecurityConfig#0" expanded="false" />
                 <element signature="method#authProvider#0;class#ApplicationSecurityConfig#0" expanded="false" />
-                <element signature="e#3270#3271#0" expanded="true" />
-                <element signature="e#3320#3321#0" expanded="true" />
+                <element signature="e#3509#3510#0" expanded="true" />
+                <element signature="e#3559#3560#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="loggedin.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="loggedin.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/loggedin.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -427,9 +427,9 @@
         <option value="$PROJECT_DIR$/src/test/java/test/SpringSecurityWebTestConfig.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/TestBlogControllerMetAuthenticatie.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/security/LoginSuccessHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/config/ApplicationSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/controller/BlogController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/loggedin.html" />
+        <option value="$PROJECT_DIR$/src/main/java/be/kdg/blog/config/ApplicationSecurityConfig.java" />
       </list>
     </option>
   </component>
@@ -936,7 +936,7 @@
       <workItem from="1508961127510" duration="626000" />
       <workItem from="1509807607042" duration="3982000" />
       <workItem from="1509819754188" duration="2188000" />
-      <workItem from="1509897373219" duration="1807000" />
+      <workItem from="1509897373219" duration="2191000" />
     </task>
     <servers />
   </component>
@@ -973,7 +973,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32028000" />
+    <option name="totallyTimeSpent" value="32412000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -1031,8 +1031,8 @@
           <folding>
             <element signature="method#configure#1;class#ApplicationSecurityConfig#0" expanded="false" />
             <element signature="method#authProvider#0;class#ApplicationSecurityConfig#0" expanded="false" />
-            <element signature="e#3270#3271#0" expanded="true" />
-            <element signature="e#3320#3321#0" expanded="true" />
+            <element signature="e#3509#3510#0" expanded="true" />
+            <element signature="e#3559#3560#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1183,8 +1183,8 @@
           <folding>
             <element signature="method#configure#1;class#ApplicationSecurityConfig#0" expanded="false" />
             <element signature="method#authProvider#0;class#ApplicationSecurityConfig#0" expanded="false" />
-            <element signature="e#3270#3271#0" expanded="true" />
-            <element signature="e#3320#3321#0" expanded="true" />
+            <element signature="e#3509#3510#0" expanded="true" />
+            <element signature="e#3559#3560#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1357,19 +1357,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/config/ApplicationSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="81" column="5" lean-forward="true" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
-          <folding>
-            <element signature="method#configure#1;class#ApplicationSecurityConfig#0" expanded="false" />
-            <element signature="method#authProvider#0;class#ApplicationSecurityConfig#0" expanded="false" />
-            <element signature="e#3270#3271#0" expanded="true" />
-            <element signature="e#3320#3321#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/controller/BlogController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
@@ -1399,6 +1386,19 @@
         <state relative-caret-position="170">
           <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/be/kdg/blog/config/ApplicationSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="81" column="43" lean-forward="false" selection-start-line="81" selection-start-column="43" selection-end-line="81" selection-end-column="43" />
+          <folding>
+            <element signature="method#configure#1;class#ApplicationSecurityConfig#0" expanded="false" />
+            <element signature="method#authProvider#0;class#ApplicationSecurityConfig#0" expanded="false" />
+            <element signature="e#3509#3510#0" expanded="true" />
+            <element signature="e#3559#3560#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
